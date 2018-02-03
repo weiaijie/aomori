@@ -1,17 +1,17 @@
 <?php 
 
 if($_GET["i"] == "1"){
-
-
+	index();
+	exit();
 }
 
 
 if ($_POST!=null and $_POST["title"]!=null and $_POST["date"]!=null and $_POST["content"]!=null) {
-	nene();
-	newindex();
-	img();
-	news();
-	index();
+	nene();//新闻中心备份
+	newindex();//新闻中心的更新
+	img();//对图片的处理
+	news();//新的新闻
+	index();//首页新闻的更新
 	}else{
 
 
@@ -46,6 +46,8 @@ fclose($fp);
 header("location:testshow.php?date=".$_POST['date']."");
 }
 
+
+//新闻中心备份
 function nene(){
 	$file = 'view/index_bottm1.html';
 	if (is_readable($file) == false) {
