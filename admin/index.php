@@ -1,22 +1,4 @@
-<?php 
-if ($_POST!=null and $_POST["name"]!=null) {
-	if($_POST["name"]=='aomori'){
-		if ($_POST["pwd"]=='luc123456') {
-			header("location:article.php");
-		}else{
-			echo "管理员密码错误";
-      exit();
-		}
-	}else {
-		# code...
-		echo "没有这个管理员";
-    exit();
-	}
-}
-
- ?>
-
- <!DOCTYPE html>
+<!DOCTYPE html>
  <html lang="zh-CN">
  <head>
  	<title>内容发布</title>
@@ -27,7 +9,7 @@ if ($_POST!=null and $_POST["name"]!=null) {
 <div class="container">
 <div style="width:220px; margin: auto;"><h1>青森旅游后台</h1></div>
 <div style="width: 450px; margin: 200px  auto;border-radius: 10px; background: #c9c2ce;padding: 50px">
-	<form class="form-horizontal" action="index.php" method="post">
+	<form class="form-horizontal" action="password.php" method="post">
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">账号</label>
     <div class="col-sm-9">
